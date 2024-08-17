@@ -1,0 +1,535 @@
+[gd_scene load_steps=167 format=3 uid="uid://bkxqyuax3sg0s"]
+
+[ext_resource type="Texture2D" uid="uid://bh63ixorsu7ix" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-4.png" id="1_0c27c"]
+[ext_resource type="Texture2D" uid="uid://lk6vdkvwelcp" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-14.png" id="1_apd6j"]
+[ext_resource type="Script" path="res://Credits Menu.gd" id="1_at56a"]
+[ext_resource type="Texture2D" uid="uid://1awiks0pmn7g" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-2.png" id="1_mmnf5"]
+[ext_resource type="Texture2D" uid="uid://bn83s560mu8la" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-8.png" id="1_xp55v"]
+[ext_resource type="Texture2D" uid="uid://ccrsbs6etawxx" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-1.png" id="2_ss2pj"]
+[ext_resource type="Texture2D" uid="uid://db0hjx3ujc00p" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-3.png" id="4_2wchn"]
+[ext_resource type="Texture2D" uid="uid://cyny7jww638fs" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-5.png" id="6_0i8q1"]
+[ext_resource type="Texture2D" uid="uid://dxh6ueap5kytm" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-6.png" id="7_2x2qj"]
+[ext_resource type="Texture2D" uid="uid://dfkb0ltrhisxt" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-7.png" id="8_b4jxj"]
+[ext_resource type="Texture2D" uid="uid://b2ygv425jga8s" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-9.png" id="10_1p6r0"]
+[ext_resource type="Texture2D" uid="uid://bjitnjqkvi4x1" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-10.png" id="11_v8dps"]
+[ext_resource type="Texture2D" uid="uid://geii2b8je4hf" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-11.png" id="12_1l2qh"]
+[ext_resource type="Texture2D" uid="uid://c832kju8ywwh4" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-12.png" id="13_onb3b"]
+[ext_resource type="Texture2D" uid="uid://2n7leco2ns6x" path="res://Art assets/Credits Menu text PNGs/Credits Menu animated text-13.png" id="14_8byal"]
+[ext_resource type="Texture2D" uid="uid://dbk85m566ujio" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-1.png" id="16_p7ps0"]
+[ext_resource type="Texture2D" uid="uid://cceewd5iaeavs" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-2.png" id="17_c82th"]
+[ext_resource type="Texture2D" uid="uid://b0xqvdyi2d4nw" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-3.png" id="18_bdei8"]
+[ext_resource type="Texture2D" uid="uid://cj2kqrk26pfu0" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-4.png" id="19_mpm4l"]
+[ext_resource type="Texture2D" uid="uid://bekjjiwgrrukf" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-5.png" id="20_abvne"]
+[ext_resource type="Texture2D" uid="uid://dekm2tlo25pau" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-6.png" id="21_coxtk"]
+[ext_resource type="Texture2D" uid="uid://8jb53lkfyfok" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-7.png" id="22_r2m87"]
+[ext_resource type="Texture2D" uid="uid://bned5g40vyl52" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-8.png" id="23_qb0ie"]
+[ext_resource type="Texture2D" uid="uid://bxf4g3xyyqyli" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-9.png" id="24_lirq2"]
+[ext_resource type="Texture2D" uid="uid://cw27mib0ankno" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-10.png" id="25_fftav"]
+[ext_resource type="Texture2D" uid="uid://bqfa7ufesomki" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-11.png" id="26_bcw4n"]
+[ext_resource type="Texture2D" uid="uid://csewoa2igdqgb" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-12.png" id="27_a8ies"]
+[ext_resource type="Texture2D" uid="uid://c5h3uhaawiyqq" path="res://Art assets/Credits Menu Programming text PNGs/Credits Menu programming text-13.png" id="28_ymd8d"]
+[ext_resource type="Texture2D" uid="uid://cu1ridebkfiul" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-1.png" id="29_f5cnt"]
+[ext_resource type="Texture2D" uid="uid://bucewrvmorqn" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-2.png" id="30_ayieg"]
+[ext_resource type="Texture2D" uid="uid://ccmpl78k4wvue" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-3.png" id="31_bk67x"]
+[ext_resource type="Texture2D" uid="uid://lntbh22e37oj" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-4.png" id="32_8r7jt"]
+[ext_resource type="Texture2D" uid="uid://c5u1loxccpi84" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-5.png" id="33_y13wv"]
+[ext_resource type="Texture2D" uid="uid://d3unnqsim7jvs" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-6.png" id="34_htiay"]
+[ext_resource type="Texture2D" uid="uid://btqbnav8ofw5m" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-7.png" id="35_gomu6"]
+[ext_resource type="Texture2D" uid="uid://c612vneawtg10" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-8.png" id="36_4vtle"]
+[ext_resource type="Texture2D" uid="uid://b5u77kw0ld7e7" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-9.png" id="37_eibb5"]
+[ext_resource type="Texture2D" uid="uid://d2cq6u6btvkc6" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-10.png" id="38_da1wu"]
+[ext_resource type="Texture2D" uid="uid://dgk6jadfnm7t6" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-11.png" id="39_qci1l"]
+[ext_resource type="Texture2D" uid="uid://bbw3jrbqiwoqh" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-12.png" id="40_u5ecb"]
+[ext_resource type="Texture2D" uid="uid://cjqstueo4obif" path="res://Art assets/Credits Menu Knightrider text PNGs/Credits Menu Knightrider animated text-13.png" id="41_6h050"]
+[ext_resource type="Texture2D" uid="uid://cncsrfpyhl070" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-1.png" id="42_by53u"]
+[ext_resource type="Texture2D" uid="uid://dhfuc0emwcpn5" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-2.png" id="43_nq20b"]
+[ext_resource type="Texture2D" uid="uid://bd500dosdcdd5" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-3.png" id="44_dhd53"]
+[ext_resource type="Texture2D" uid="uid://cmwe84vj17ofd" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-4.png" id="45_cp7it"]
+[ext_resource type="Texture2D" uid="uid://dnkxjvgc7l8df" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-5.png" id="46_bt7hj"]
+[ext_resource type="Texture2D" uid="uid://sxhj5imwbdfx" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-6.png" id="47_to35t"]
+[ext_resource type="Texture2D" uid="uid://c3au4s5fkp2t8" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-7.png" id="48_xfjul"]
+[ext_resource type="Texture2D" uid="uid://dnv0n0k3n040k" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-8.png" id="49_113ds"]
+[ext_resource type="Texture2D" uid="uid://cn62cxqxcxi2v" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-9.png" id="50_28ntk"]
+[ext_resource type="Texture2D" uid="uid://dshocb0gt5rfw" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-10.png" id="51_6fwue"]
+[ext_resource type="Texture2D" uid="uid://cmy8avp20w20t" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-11.png" id="52_xobb8"]
+[ext_resource type="Texture2D" uid="uid://osfjc3ggv1ra" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-12.png" id="53_u1jjh"]
+[ext_resource type="Texture2D" uid="uid://cmhis2vajq1j8" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-13.png" id="54_58s7t"]
+[ext_resource type="Texture2D" uid="uid://r5s18vbfuun4" path="res://Art assets/Credits Menu LikesWafflez text PNGs/Credits Menu LikesWafflez animated text-14.png" id="55_mdxcp"]
+[ext_resource type="Texture2D" uid="uid://btcuxo7c1m5q4" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-1.png" id="56_bhsp7"]
+[ext_resource type="Texture2D" uid="uid://bkxgfjhpaxxas" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-2.png" id="57_c66dv"]
+[ext_resource type="Texture2D" uid="uid://bqyc77mfl11fa" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-3.png" id="58_j26uq"]
+[ext_resource type="Texture2D" uid="uid://b3vlc60wnis3l" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-4.png" id="59_01qhl"]
+[ext_resource type="Texture2D" uid="uid://d11lkimfe74f6" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-5.png" id="60_xg12u"]
+[ext_resource type="Texture2D" uid="uid://emoder3kd6bq" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-6.png" id="61_44us0"]
+[ext_resource type="Texture2D" uid="uid://bxix11i6ti1l1" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-7.png" id="62_crub3"]
+[ext_resource type="Texture2D" uid="uid://cci55m8m7jryc" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-8.png" id="63_8c72f"]
+[ext_resource type="Texture2D" uid="uid://bx7tlxmub6k05" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-9.png" id="64_elqbv"]
+[ext_resource type="Texture2D" uid="uid://cw81lwj3femex" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-10.png" id="65_g60ul"]
+[ext_resource type="Texture2D" uid="uid://dv60txqbmlkgo" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-11.png" id="66_0ybl8"]
+[ext_resource type="Texture2D" uid="uid://b45c8qmmd5po4" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-12.png" id="67_prce6"]
+[ext_resource type="Texture2D" uid="uid://cr8k6dyxi4ns2" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-13.png" id="68_831cv"]
+[ext_resource type="Texture2D" uid="uid://c1yw8inkmbuvt" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-14.png" id="69_wye7d"]
+[ext_resource type="Texture2D" uid="uid://clr4bsk17xcui" path="res://Art assets/Credits Menu Osama Hussein text PNGs/Credits Menu Osama Hussein name-15.png" id="70_om0t4"]
+[ext_resource type="Texture2D" uid="uid://p5b13nh2wjxw" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-1.png" id="71_14iu3"]
+[ext_resource type="Texture2D" uid="uid://bpiussi0yi8ch" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-2.png" id="72_guk16"]
+[ext_resource type="Texture2D" uid="uid://m5paew5hgtlo" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-3.png" id="73_yvjai"]
+[ext_resource type="Texture2D" uid="uid://be5tww1d2ltb6" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-4.png" id="74_t5nte"]
+[ext_resource type="Texture2D" uid="uid://bqj51ccvlt0pn" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-5.png" id="75_rqs23"]
+[ext_resource type="Texture2D" uid="uid://brc7bu3p16mdu" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-6.png" id="76_mywbg"]
+[ext_resource type="Texture2D" uid="uid://cj3ijbj21s5rt" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-7.png" id="77_n5wat"]
+[ext_resource type="Texture2D" uid="uid://bsad80yksr5w" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-8.png" id="78_4qq01"]
+[ext_resource type="Texture2D" uid="uid://fjmuwsn4khct" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-9.png" id="79_wcdbj"]
+[ext_resource type="Texture2D" uid="uid://b0m678iwhxda1" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-10.png" id="80_778t6"]
+[ext_resource type="Texture2D" uid="uid://ck4vj7xkqlejl" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-11.png" id="81_osxxj"]
+[ext_resource type="Texture2D" uid="uid://be5dqdn7veruu" path="res://Art assets/Credits Menu Art design text PNGs/Credits Menu art design animated text-12.png" id="82_rer31"]
+[ext_resource type="Texture2D" uid="uid://cosoq2dlswsta" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-1.png" id="83_afayb"]
+[ext_resource type="Texture2D" uid="uid://bosxippu0ectc" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-2.png" id="84_s0abr"]
+[ext_resource type="Texture2D" uid="uid://day23w2wigdru" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-3.png" id="85_afde4"]
+[ext_resource type="Texture2D" uid="uid://dhdk4ataai672" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-4.png" id="86_eiyf2"]
+[ext_resource type="Texture2D" uid="uid://bwmql2akc74ko" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-5.png" id="87_1oul6"]
+[ext_resource type="Texture2D" uid="uid://c1n7rbt64kcy0" path="res://Art assets/Credits Menu Deba text PNGs/Credits Menu Deba name-6.png" id="88_rbxts"]
+[ext_resource type="Texture2D" uid="uid://bvbblfv4ilksa" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-1.png" id="89_vq5g3"]
+[ext_resource type="Texture2D" uid="uid://bt6rvu1vecevi" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-2.png" id="90_3wil8"]
+[ext_resource type="Texture2D" uid="uid://ck50jo7yg65xw" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-3.png" id="91_qeyja"]
+[ext_resource type="Texture2D" uid="uid://r1vt57eesngw" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-4.png" id="92_bousd"]
+[ext_resource type="Texture2D" uid="uid://cyrb843p8arni" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-5.png" id="93_2prc6"]
+[ext_resource type="Texture2D" uid="uid://d1nnvbtjq2wkr" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-6.png" id="94_48vwn"]
+[ext_resource type="Texture2D" uid="uid://c38ltbwf824bp" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-7.png" id="95_yjo86"]
+[ext_resource type="Texture2D" uid="uid://bwi774bs1wu4h" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-8.png" id="96_48ayn"]
+[ext_resource type="Texture2D" uid="uid://c22xey8hcvwed" path="res://Art assets/Credits Menu Jason N text PNGs/Credits Menu Jason N animated text-9.png" id="97_slwlp"]
+[ext_resource type="Texture2D" uid="uid://cl0dc3joqwffe" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-1.png" id="98_fq0qe"]
+[ext_resource type="Texture2D" uid="uid://jsgmmc46p772" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-2.png" id="99_pyrqp"]
+[ext_resource type="Texture2D" uid="uid://doh8g54x5lcko" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-3.png" id="100_rr8fo"]
+[ext_resource type="Texture2D" uid="uid://cx6104eocm1gr" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-4.png" id="101_ou6jp"]
+[ext_resource type="Texture2D" uid="uid://bjphm58y2tjjn" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-5.png" id="102_5ppq8"]
+[ext_resource type="Texture2D" uid="uid://p5bvksacs0oo" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-6.png" id="103_ejmoc"]
+[ext_resource type="Texture2D" uid="uid://cdrmj5n7nt0ng" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-7.png" id="104_2hpq0"]
+[ext_resource type="Texture2D" uid="uid://cv4vx53uug1qj" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-8.png" id="105_7p164"]
+[ext_resource type="Texture2D" uid="uid://dtgqw76xduv4i" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-9.png" id="106_bq7uy"]
+[ext_resource type="Texture2D" uid="uid://bcsegl3y5v7yn" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-10.png" id="107_erres"]
+[ext_resource type="Texture2D" uid="uid://dpm0lx87wgj7t" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-11.png" id="108_ja5uy"]
+[ext_resource type="Texture2D" uid="uid://ckr7on7wnk2bk" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-12.png" id="109_8uyp4"]
+[ext_resource type="Texture2D" uid="uid://c7f0dleguwwns" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-13.png" id="110_8deh2"]
+[ext_resource type="Texture2D" uid="uid://bxixlne6p0hjo" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-14.png" id="111_xgsvy"]
+[ext_resource type="Texture2D" uid="uid://ca4mfg4ugr6dy" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-15.png" id="112_0it5f"]
+[ext_resource type="Texture2D" uid="uid://cgdpuhxpekcxr" path="res://Art assets/Credits Menu Music composer text PNGs/Credits Menu music composer animated text-16.png" id="113_xyj5u"]
+[ext_resource type="Texture2D" uid="uid://dlwyv3s75iyng" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-1.png" id="114_3npji"]
+[ext_resource type="Texture2D" uid="uid://sr2sgpj7vube" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-2.png" id="115_jthj4"]
+[ext_resource type="Texture2D" uid="uid://buvo11jo45y5p" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-3.png" id="116_l7pqf"]
+[ext_resource type="Texture2D" uid="uid://dwjy0q0l3gg17" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-4.png" id="117_v4agb"]
+[ext_resource type="Texture2D" uid="uid://b2qkxt7ll1cdm" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-5.png" id="118_ppba0"]
+[ext_resource type="Texture2D" uid="uid://dodbm0u02twrr" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-6.png" id="119_6l4re"]
+[ext_resource type="Texture2D" uid="uid://bk283jyu6woce" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-7.png" id="120_myp2w"]
+[ext_resource type="Texture2D" uid="uid://cghxiu4ah73qh" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-8.png" id="121_2u024"]
+[ext_resource type="Texture2D" uid="uid://dkd55cdnrv4jp" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-9.png" id="122_m3af3"]
+[ext_resource type="Texture2D" uid="uid://csba81fbs2cro" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-10.png" id="123_qkmtu"]
+[ext_resource type="Texture2D" uid="uid://u1fb5nox8dqn" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-11.png" id="124_sukdt"]
+[ext_resource type="Texture2D" uid="uid://d12mors7kbxnw" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-12.png" id="125_6uut6"]
+[ext_resource type="Texture2D" uid="uid://dxqgshgthcesl" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-13.png" id="126_bpv7g"]
+[ext_resource type="Texture2D" uid="uid://cbtxos1wbt6h" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-14.png" id="127_j17px"]
+[ext_resource type="Texture2D" uid="uid://27xse536w1or" path="res://Art assets/Credits Menu Ruben Skyline text PNGs/Credits Menu Ruben Skyline animated text-15.png" id="128_lqs3n"]
+[ext_resource type="Texture2D" uid="uid://q7v7mt7cymre" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-1.png" id="129_stvvx"]
+[ext_resource type="Texture2D" uid="uid://btrp32wubxhxh" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-2.png" id="130_o4ump"]
+[ext_resource type="Texture2D" uid="uid://dq8sukrh0hc2u" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-3.png" id="131_m1h6b"]
+[ext_resource type="Texture2D" uid="uid://by8qsr2ulhxuq" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-4.png" id="132_fjjas"]
+[ext_resource type="Texture2D" uid="uid://0j21q375fq8e" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-5.png" id="133_mg87u"]
+[ext_resource type="Texture2D" uid="uid://nacndwjuf2m" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-6.png" id="134_x7kss"]
+[ext_resource type="Texture2D" uid="uid://cgrmcf0rp3vgr" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-7.png" id="135_1broo"]
+[ext_resource type="Texture2D" uid="uid://bqii4oabqy8lw" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-8.png" id="136_xilkf"]
+[ext_resource type="Texture2D" uid="uid://cm5r4w6vhbwsq" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-9.png" id="137_potwv"]
+[ext_resource type="Texture2D" uid="uid://dbv6oa8j0rphj" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-10.png" id="138_r7dbd"]
+[ext_resource type="Texture2D" uid="uid://lqyk1rqw5mw7" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-11.png" id="139_xm2x6"]
+[ext_resource type="Texture2D" uid="uid://5xsro1n4kkq0" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-12.png" id="140_08l3a"]
+[ext_resource type="Texture2D" uid="uid://b5k0d6wyoeeqg" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-13.png" id="141_dod1y"]
+[ext_resource type="Texture2D" uid="uid://c41rpd1nig5dk" path="res://Art assets/Credits Menu SFX composer text PNGs/Credits Menu SFX composer animated text-14.png" id="142_5jpb0"]
+
+[sub_resource type="Animation" id="Animation_dn5cx"]
+resource_name = "Credits Menu Title Animation"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/CreditsMenuTitle:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_ss2pj"), ExtResource("1_mmnf5"), ExtResource("4_2wchn"), ExtResource("1_0c27c"), ExtResource("6_0i8q1"), ExtResource("7_2x2qj"), ExtResource("8_b4jxj"), ExtResource("1_xp55v"), ExtResource("10_1p6r0"), ExtResource("11_v8dps"), ExtResource("12_1l2qh"), ExtResource("13_onb3b"), ExtResource("14_8byal"), ExtResource("1_apd6j")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1cmr"]
+_data = {
+"Credits Menu Title Animation": SubResource("Animation_dn5cx")
+}
+
+[sub_resource type="Animation" id="Animation_xc6cn"]
+resource_name = "Programming Text Animation"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/ProgrammingText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("16_p7ps0"), ExtResource("17_c82th"), ExtResource("18_bdei8"), ExtResource("19_mpm4l"), ExtResource("20_abvne"), ExtResource("21_coxtk"), ExtResource("22_r2m87"), ExtResource("23_qb0ie"), ExtResource("24_lirq2"), ExtResource("25_fftav"), ExtResource("26_bcw4n"), ExtResource("27_a8ies"), ExtResource("28_ymd8d")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lm3c4"]
+_data = {
+"Programming Text Animation": SubResource("Animation_xc6cn")
+}
+
+[sub_resource type="Animation" id="Animation_bkk1l"]
+resource_name = "Knightrider Text Animation"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/KnightriderText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("29_f5cnt"), ExtResource("30_ayieg"), ExtResource("31_bk67x"), ExtResource("32_8r7jt"), ExtResource("33_y13wv"), ExtResource("34_htiay"), ExtResource("35_gomu6"), ExtResource("36_4vtle"), ExtResource("37_eibb5"), ExtResource("38_da1wu"), ExtResource("39_qci1l"), ExtResource("40_u5ecb"), ExtResource("41_6h050")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wehb1"]
+_data = {
+"Knightrider Text Animation": SubResource("Animation_bkk1l")
+}
+
+[sub_resource type="Animation" id="Animation_u7pul"]
+resource_name = "LikesWafflez Text Animation"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/LikesWafflezText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("42_by53u"), ExtResource("43_nq20b"), ExtResource("44_dhd53"), ExtResource("45_cp7it"), ExtResource("46_bt7hj"), ExtResource("47_to35t"), ExtResource("48_xfjul"), ExtResource("49_113ds"), ExtResource("50_28ntk"), ExtResource("51_6fwue"), ExtResource("52_xobb8"), ExtResource("53_u1jjh"), ExtResource("54_58s7t"), ExtResource("55_mdxcp")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dvmgo"]
+_data = {
+"LikesWafflez Text Animation": SubResource("Animation_u7pul")
+}
+
+[sub_resource type="Animation" id="Animation_hcdrl"]
+resource_name = "Osama Hussein Text Animation"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/OsamaHusseinText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("56_bhsp7"), ExtResource("57_c66dv"), ExtResource("58_j26uq"), ExtResource("59_01qhl"), ExtResource("60_xg12u"), ExtResource("61_44us0"), ExtResource("62_crub3"), ExtResource("63_8c72f"), ExtResource("64_elqbv"), ExtResource("65_g60ul"), ExtResource("66_0ybl8"), ExtResource("67_prce6"), ExtResource("68_831cv"), ExtResource("69_wye7d"), ExtResource("70_om0t4")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wjp8"]
+_data = {
+"Osama Hussein Text Animation": SubResource("Animation_hcdrl")
+}
+
+[sub_resource type="Animation" id="Animation_xlyfa"]
+resource_name = "Art Design Text Animation"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/ArtDesignText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("71_14iu3"), ExtResource("72_guk16"), ExtResource("73_yvjai"), ExtResource("74_t5nte"), ExtResource("75_rqs23"), ExtResource("76_mywbg"), ExtResource("77_n5wat"), ExtResource("78_4qq01"), ExtResource("79_wcdbj"), ExtResource("80_778t6"), ExtResource("81_osxxj"), ExtResource("82_rer31")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hnlbg"]
+_data = {
+"Art Design Text Animation": SubResource("Animation_xlyfa")
+}
+
+[sub_resource type="Animation" id="Animation_2cfkt"]
+resource_name = "Deba Text Animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/DebaText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("83_afayb"), ExtResource("84_s0abr"), ExtResource("85_afde4"), ExtResource("86_eiyf2"), ExtResource("87_1oul6"), ExtResource("88_rbxts")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhi13"]
+_data = {
+"Deba Text Animation": SubResource("Animation_2cfkt")
+}
+
+[sub_resource type="Animation" id="Animation_ih3kb"]
+resource_name = "Jason N Text Animation"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/JasonNText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("89_vq5g3"), ExtResource("90_3wil8"), ExtResource("91_qeyja"), ExtResource("92_bousd"), ExtResource("93_2prc6"), ExtResource("94_48vwn"), ExtResource("95_yjo86"), ExtResource("96_48ayn"), ExtResource("97_slwlp")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3oe3"]
+_data = {
+"Jason N Text Animation": SubResource("Animation_ih3kb")
+}
+
+[sub_resource type="Animation" id="Animation_drpnx"]
+resource_name = "Music Composer Text Animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/MusicComposerText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("98_fq0qe"), ExtResource("99_pyrqp"), ExtResource("100_rr8fo"), ExtResource("101_ou6jp"), ExtResource("102_5ppq8"), ExtResource("103_ejmoc"), ExtResource("104_2hpq0"), ExtResource("105_7p164"), ExtResource("106_bq7uy"), ExtResource("107_erres"), ExtResource("108_ja5uy"), ExtResource("109_8uyp4"), ExtResource("110_8deh2"), ExtResource("111_xgsvy"), ExtResource("112_0it5f"), ExtResource("113_xyj5u")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vo4rm"]
+_data = {
+"Music Composer Text Animation": SubResource("Animation_drpnx")
+}
+
+[sub_resource type="Animation" id="Animation_p0o6a"]
+resource_name = "Ruben Skyline Text Animation"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/RubenSkylineText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("114_3npji"), ExtResource("115_jthj4"), ExtResource("116_l7pqf"), ExtResource("117_v4agb"), ExtResource("118_ppba0"), ExtResource("119_6l4re"), ExtResource("120_myp2w"), ExtResource("121_2u024"), ExtResource("122_m3af3"), ExtResource("123_qkmtu"), ExtResource("124_sukdt"), ExtResource("125_6uut6"), ExtResource("126_bpv7g"), ExtResource("127_j17px"), ExtResource("128_lqs3n")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ch72q"]
+_data = {
+"Ruben Skyline Text Animation": SubResource("Animation_p0o6a")
+}
+
+[sub_resource type="Animation" id="Animation_v2l5i"]
+resource_name = "SFX Composer Text Animation"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/SFXComposerText:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("129_stvvx"), ExtResource("130_o4ump"), ExtResource("131_m1h6b"), ExtResource("132_fjjas"), ExtResource("133_mg87u"), ExtResource("134_x7kss"), ExtResource("135_1broo"), ExtResource("136_xilkf"), ExtResource("137_potwv"), ExtResource("138_r7dbd"), ExtResource("139_xm2x6"), ExtResource("140_08l3a"), ExtResource("141_dod1y"), ExtResource("142_5jpb0")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eu5h3"]
+_data = {
+"SFX Composer Text Animation": SubResource("Animation_v2l5i")
+}
+
+[sub_resource type="Animation" id="Animation_f7juj"]
+resource_name = "Ruben Skyline Text Animation 2"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Control/RubenSkylineText2:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("114_3npji"), ExtResource("115_jthj4"), ExtResource("116_l7pqf"), ExtResource("117_v4agb"), ExtResource("118_ppba0"), ExtResource("119_6l4re"), ExtResource("120_myp2w"), ExtResource("121_2u024"), ExtResource("122_m3af3"), ExtResource("123_qkmtu"), ExtResource("124_sukdt"), ExtResource("125_6uut6"), ExtResource("126_bpv7g"), ExtResource("127_j17px"), ExtResource("128_lqs3n")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imtdp"]
+_data = {
+"Ruben Skyline Text Animation 2": SubResource("Animation_f7juj")
+}
+
+[node name="CreditsMenu" type="Node"]
+script = ExtResource("1_at56a")
+
+[node name="CreditsMenuTitleAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y1cmr")
+}
+
+[node name="ProgrammingTextAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lm3c4")
+}
+
+[node name="KnightriderAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wehb1")
+}
+
+[node name="LikesWafflezAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dvmgo")
+}
+
+[node name="OsamaHusseinAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3wjp8")
+}
+
+[node name="ArtDesignAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hnlbg")
+}
+
+[node name="DebaAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mhi13")
+}
+
+[node name="JasonNAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f3oe3")
+}
+
+[node name="MusicComposerAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vo4rm")
+}
+
+[node name="RubenSkylineAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ch72q")
+}
+
+[node name="SFXComposerAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eu5h3")
+}
+
+[node name="RubenSkylineAnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_imtdp")
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(1152, 2400)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CreditsMenuTitle" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(600, 400)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_8byal")
+
+[node name="ProgrammingText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(300, 600)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("28_ymd8d")
+
+[node name="KnightriderText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(700, 600)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("41_6h050")
+
+[node name="LikesWafflezText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(700, 700)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("55_mdxcp")
+
+[node name="OsamaHusseinText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(720, 800)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("70_om0t4")
+
+[node name="ArtDesignText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(300, 1000)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("82_rer31")
+
+[node name="DebaText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(600, 1025)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("88_rbxts")
+
+[node name="JasonNText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(675, 1125)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("97_slwlp")
+
+[node name="MusicComposerText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(300, 1400)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("113_xyj5u")
+
+[node name="RubenSkylineText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(700, 1400)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("128_lqs3n")
+
+[node name="SFXComposerText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(300, 1700)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("142_5jpb0")
+
+[node name="RubenSkylineText2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(700, 1700)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("128_lqs3n")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://68qiupwplyvs"]
 
 [ext_resource type="Script" path="res://Projectiles.gd" id="1_ab747"]
-[ext_resource type="Texture2D" uid="uid://81scrf6v6hxf" path="res://projectile.png" id="1_dpfyv"]
+[ext_resource type="Texture2D" path="res://projectile.png" id="1_dpfyv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvb5x"]
 size = Vector2(170, 110.07)

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b0ipsxk0qjjp1"
-path="res://.godot/imported/virgo.ttf-a348ae4e940ab33de5845fc809988456.fontdata"
+uid="uid://mmxsx6swxwyd"
+path="res://.godot/imported/virgo.ttf-a99144c72a58971eb769aa058faf8f34.fontdata"
 
 [deps]
 
-source_file="res://virgo.ttf"
-dest_files=["res://.godot/imported/virgo.ttf-a348ae4e940ab33de5845fc809988456.fontdata"]
+source_file="res://Art assets/virgo.ttf"
+dest_files=["res://.godot/imported/virgo.ttf-a99144c72a58971eb769aa058faf8f34.fontdata"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnafq50r76fmy"
-path="res://.godot/imported/Spaceship1.png-f91af8f8b2f4a77fbef925494a0d2a9b.ctex"
+uid="uid://cuylim3syt46s"
+path="res://.godot/imported/projectile.png-5d91064b7c56ec555c6b40b307089e14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spaceship1.png"
-dest_files=["res://.godot/imported/Spaceship1.png-f91af8f8b2f4a77fbef925494a0d2a9b.ctex"]
+source_file="res://Art assets/projectile.png"
+dest_files=["res://.godot/imported/projectile.png-5d91064b7c56ec555c6b40b307089e14.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
