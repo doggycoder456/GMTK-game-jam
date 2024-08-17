@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 
-@export var player_speed = 100
+@export var player_speed = 300
 var screensize;
 signal hit;
 
 func _ready():
 	screensize = get_viewport_rect().size
 	if (position.x != screensize.x / 4 && position.y != screensize.y / 2):
-		position.x = screensize.x / 4
+		position.x = screensize.x / 6
 		position.y = (screensize.y / 2)
 
 func _process(delta):
@@ -29,8 +29,8 @@ func _process(delta):
 		velocity = velocity.normalized() * player_speed
 	
 	position += velocity * delta
-	#position = position.clamp(Vector2.ZERO, screensize)
-	print(position)
+	position = position.clamp(Vector2.ZERO, screensize)
+	
 
 
 
@@ -38,3 +38,4 @@ func _process(delta):
 func _on_collison_zone_2d_body_entered(body):
 	hit.emit()
 	$CollisionShape2D.set_deferred("disabled", true)
+	
