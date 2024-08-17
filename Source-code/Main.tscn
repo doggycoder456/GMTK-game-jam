@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=6 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_bpmro"]
 [ext_resource type="PackedScene" uid="uid://bqfqqfysdak6h" path="res://ProjectileSpawner.tscn" id="2_tt51p"]
+[ext_resource type="Texture2D" uid="uid://cv0dqvne0bgnq" path="res://Art assets/Slider bar.png" id="3_8ml2x"]
+[ext_resource type="Texture2D" uid="uid://cwbcxa0hmgv5q" path="res://Art assets/Slider handle.png" id="4_egwsk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvpnw"]
+texture = ExtResource("3_8ml2x")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
 
 [node name="Main" type="Node2D"]
 position = Vector2(1, 0)
@@ -12,3 +19,17 @@ scale = Vector2(3.17, 3.17)
 [node name="ProjectileSpawner" parent="." instance=ExtResource("2_tt51p")]
 position = Vector2(949, 355)
 rotation = -1.5708
+
+[node name="MainCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="VSlider" parent="MainCanvasLayer"]
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 101.0
+offset_bottom = 210.0
+theme_override_icons/grabber = ExtResource("4_egwsk")
+theme_override_icons/grabber_highlight = ExtResource("4_egwsk")
+theme_override_icons/grabber_disabled = ExtResource("4_egwsk")
+theme_override_styles/slider = SubResource("StyleBoxTexture_cvpnw")
+editable = false
+scrollable = false

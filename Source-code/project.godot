@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/resizable=false
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="GMTK-game-jam"
+
 [input]
 
 space={
