@@ -1,16 +1,30 @@
+class_name creditsMenu
+
 extends Node
 
+var timeToEndCredits
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	#pass # Replace with function body.
+	
+	# Start the end credits timer to 0 first
+	timeToEndCredits = 0.0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#pass
 	
-	#$"ScrollContainer".scroll_vertical += 1
+	# Increment the end credits timer by delta
+	timeToEndCredits += delta
+	
+	# Scroll to the bottom of the container by 1 each frame
+	$"ScrollContainer".scroll_vertical += 1
+	
+	# If the end credits timer is greater than 13 seconds, transition to the main scene
+	if timeToEndCredits >= 13.0:
+		get_tree().change_scene_to_file("res://Main.tscn")
 	
 	if !$"CreditsMenuTitleAnimationPlayer".is_playing():
 		$"CreditsMenuTitleAnimationPlayer".play("Credits Menu Title Animation")

@@ -465,82 +465,71 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-custom_minimum_size = Vector2(1152, 1600)
+custom_minimum_size = Vector2(1152, 2400)
 layout_mode = 2
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="CreditsMenuTitle" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(600, 100)
+position = Vector2(600, 400)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_8byal")
 
 [node name="ProgrammingText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(300, 300)
+position = Vector2(300, 600)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("28_ymd8d")
 
 [node name="KnightriderText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(700, 300)
+position = Vector2(700, 600)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("41_6h050")
 
 [node name="LikesWafflezText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(700, 400)
+position = Vector2(700, 700)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("55_mdxcp")
 
 [node name="OsamaHusseinText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(720, 500)
+position = Vector2(720, 800)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("70_om0t4")
 
 [node name="ArtDesignText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(300, 700)
+position = Vector2(300, 1000)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("82_rer31")
 
 [node name="DebaText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(600, 725)
+position = Vector2(600, 1025)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("88_rbxts")
 
 [node name="JasonNText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(675, 825)
+position = Vector2(675, 1125)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("97_slwlp")
 
 [node name="MusicComposerText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(300, 1100)
+position = Vector2(300, 1400)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("113_xyj5u")
 
 [node name="RubenSkylineText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(700, 1100)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("128_lqs3n")
-
-[node name="SFXComposerText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
-position = Vector2(300, 1400)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("142_5jpb0")
-
-[node name="RubenSkylineText2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
 position = Vector2(700, 1400)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("128_lqs3n")
 
-[node name="BackButton" type="Button" parent="ScrollContainer/VBoxContainer/Control"]
-layout_direction = 1
-layout_mode = 2
-offset_left = 530.0
-offset_top = 1550.0
-offset_right = 621.0
-offset_bottom = 1586.0
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "Go back!"
+[node name="SFXComposerText" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(300, 1700)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("142_5jpb0")
+
+[node name="RubenSkylineText2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Control"]
+position = Vector2(700, 1700)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("128_lqs3n")
