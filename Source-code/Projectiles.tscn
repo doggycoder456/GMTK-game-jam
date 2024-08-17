@@ -15,11 +15,6 @@ position = Vector2(154, -7.105)
 scale = Vector2(4.55, 4.55)
 texture = ExtResource("1_dpfyv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_index = -1
-position = Vector2(154, -7)
-shape = SubResource("RectangleShape2D_pvb5x")
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(154, -8)
 
@@ -27,4 +22,9 @@ position = Vector2(154, -8)
 z_index = -1
 shape = SubResource("RectangleShape2D_pvb5x")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.73
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

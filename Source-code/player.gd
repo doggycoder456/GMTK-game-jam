@@ -1,18 +1,22 @@
 extends CharacterBody2D
-
-
-@export var player_speed = 300
-var screensize;
 signal hit;
 
-func _ready():
+@export var player_speed = 300
+@export var player_health  = 100
+var screensize;
+
+func start():
 	screensize = get_viewport_rect().size
 	if (position.x != screensize.x / 4 && position.y != screensize.y / 2):
 		position.x = screensize.x / 6
 		position.y = (screensize.y / 2)
+	$CollisionShape2D.disabled = false
+		
+func _ready():
+	start()
 
 func _process(delta):
-	var velocity = Vector2.ZERO
+	var velocity = Vector2.ZERO 
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
 	
@@ -33,9 +37,8 @@ func _process(delta):
 	
 
 
-
-
-func _on_collison_zone_2d_body_entered(body):
+func _on_body_entered(body):
+	hide() # Player disappears after being hit.
 	hit.emit()
+	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
-	
