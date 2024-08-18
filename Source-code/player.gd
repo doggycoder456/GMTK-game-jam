@@ -2,10 +2,13 @@ extends CharacterBody2D
 signal hit;
 
 @export var player_speed = 300
-@export var player_health  = 100
+@export var max_player_health  = 100
+@export var current_player_health = max_player_health
+
 var screensize;
 
 func start():
+	show()
 	screensize = get_viewport_rect().size
 	if (position.x != screensize.x / 4 && position.y != screensize.y / 2):
 		position.x = screensize.x / 6
@@ -37,8 +40,12 @@ func _process(delta):
 	
 
 
-func _on_body_entered(body):
-	hide() # Player disappears after being hit.
+
+
+
+
+func _on_area_2d_area_entered(area):
 	hit.emit()
+	print(hit)
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)

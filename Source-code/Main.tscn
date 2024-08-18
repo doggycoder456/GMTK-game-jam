@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=6 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_bpmro"]
 [ext_resource type="Script" path="res://Main.gd" id="1_th16n"]
 [ext_resource type="PackedScene" uid="uid://bqfqqfysdak6h" path="res://ProjectileSpawner.tscn" id="2_tt51p"]
 [ext_resource type="PackedScene" uid="uid://dbapln3oi8kp0" path="res://Hud.tscn" id="3_ef31k"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="5_ak8dl"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(1, 0)
@@ -11,11 +12,23 @@ script = ExtResource("1_th16n")
 
 [node name="Player" parent="." instance=ExtResource("1_bpmro")]
 scale = Vector2(3.17, 3.17)
+collision_mask = 2
 
 [node name="ProjectileSpawner" parent="." instance=ExtResource("2_tt51p")]
 position = Vector2(949, 355)
 rotation = -1.5708
 
 [node name="HUD" parent="." instance=ExtResource("3_ef31k")]
+
+[node name="HealthBar" type="ProgressBar" parent="HUD" node_paths=PackedStringArray("player")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 27.0
+grow_horizontal = 2
+script = ExtResource("5_ak8dl")
+player = NodePath("../../Player")
 
 [connection signal="start_game" from="HUD" to="." method="new_game"]

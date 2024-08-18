@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://68qiupwplyvs"]
 
 [ext_resource type="Script" path="res://Projectiles.gd" id="1_ab747"]
-[ext_resource type="Texture2D" path="res://projectile.png" id="1_dpfyv"]
+[ext_resource type="Texture2D" uid="uid://cuylim3syt46s" path="res://Art assets/projectile.png" id="2_4scsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvb5x"]
 size = Vector2(170, 110.07)
@@ -13,7 +13,7 @@ script = ExtResource("1_ab747")
 [node name="ProjectileSprite" type="Sprite2D" parent="."]
 position = Vector2(154, -7.105)
 scale = Vector2(4.55, 4.55)
-texture = ExtResource("1_dpfyv")
+texture = ExtResource("2_4scsd")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(154, -8)
