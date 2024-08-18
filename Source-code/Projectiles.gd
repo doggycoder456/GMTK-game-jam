@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var player: CharacterBody2D
 @export var projectile_speed = 300
 var dir : float
 var spawnPos: Vector2
