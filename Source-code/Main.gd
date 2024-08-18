@@ -1,3 +1,5 @@
+class_name Main
+
 extends Node2D
 
 
@@ -5,19 +7,28 @@ extends Node2D
 
 func _ready():
 	$Player.hide()
-	new_game() # Replace with function body.
+	$"Enemy".hide()
+	$"Enemy".set_process(false)
+	$"Enemy".set_physics_process(false)
+	#new_game() # Replace with function body.
 
 
 func game_over():
 	new_game()
 	$HUD.show_game_over()
-	$Player.hide()
+	$Player.hide() # Replace with function body.
+	$"Enemy".hide()
+	$"Enemy".set_process(false)
+	$"Enemy".set_physics_process(false)
 
 func new_game():
-	$Player.hide()
-	$HUD.hide()
 	$Player.start()
 	$HUD.show()
+	
+	$"Enemy".show()
+	$"Enemy".set_process(true)
+	$"Enemy".set_physics_process(true)
+	
 	$HUD.show_message("Get Ready")
 	$Player.show()
 

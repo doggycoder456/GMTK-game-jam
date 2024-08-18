@@ -1,6 +1,10 @@
+class_name Player
+
 extends CharacterBody2D
+
 signal hit
 signal dead
+
 @export var player_speed = 300
 @export var max_player_health  = 100
 @export var current_player_health = max_player_health
@@ -35,11 +39,11 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screensize)
+
+
+func playerGotDamaged(amountOfDamage):
 	
-		
-
-
-
+	current_player_health -= amountOfDamage
 
 
 

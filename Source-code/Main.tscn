@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=7 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_bpmro"]
 [ext_resource type="Script" path="res://Main.gd" id="1_th16n"]
 [ext_resource type="PackedScene" uid="uid://bqfqqfysdak6h" path="res://ProjectileSpawner.tscn" id="2_tt51p"]
 [ext_resource type="PackedScene" uid="uid://dbapln3oi8kp0" path="res://Hud.tscn" id="3_ef31k"]
 [ext_resource type="Script" path="res://HealthBar.gd" id="5_ak8dl"]
+[ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="6_ce3wa"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(1, 0)
@@ -33,7 +34,8 @@ player = NodePath("../../Player")
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="dead" from="Player" to="." method="game_over"]
-[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[node name="Enemy" parent="." instance=ExtResource("6_ce3wa")]
+position = Vector2(1000, 300)
+
 [connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="timeout" from="Timer" to="." method="new_game"]
