@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dja8sr2hkb8c3"]
+[gd_scene load_steps=21 format=3 uid="uid://dja8sr2hkb8c3"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_0mf3w"]
 [ext_resource type="Texture2D" uid="uid://um1fcr6ky3k2" path="res://Art assets/Menu Background.png" id="1_h8ale"]
@@ -14,8 +14,35 @@
 [ext_resource type="Texture2D" uid="uid://b5odva0ddn1m1" path="res://Art assets/Credits_Button_Idle.png" id="12_41m75"]
 [ext_resource type="Texture2D" uid="uid://cy8mt44bvibkv" path="res://Art assets/Credits_Button_Press.png" id="13_jon7d"]
 [ext_resource type="Texture2D" uid="uid://d0cbonf5aurqw" path="res://Art assets/Credits_Button_Hover.png" id="14_y6hpc"]
+[ext_resource type="Script" path="res://AnimationPlayer.gd" id="15_6obb6"]
 [ext_resource type="Texture2D" uid="uid://bk5umkd7dsy6n" path="res://Art assets/Sonar_Line.png" id="15_131t4"]
 [ext_resource type="Texture2D" uid="uid://yrnxvx11l6uq" path="res://Art assets/Sonar_Foreground.png" id="16_nsvsp"]
+
+[sub_resource type="Animation" id="Animation_t8at4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_cneya"]
+resource_name = "Sonar"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SonarLine:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.261799, 0.0, 0.261799, 0.523599, 0.785398, 1.0472, 1.309, 1.5708, 1.8326, 2.0944, 2.35619, 2.61799, 2.87979, 3.14159, 3.40339, 3.66519, 3.92699, 4.27606, 4.53786, 4.79966, 5.06145, 5.32325, 5.58505, 5.84685, 6.02139]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ukil"]
+_data = {
+"RESET": SubResource("Animation_t8at4"),
+"Sonar": SubResource("Animation_cneya")
+}
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_0mf3w")
@@ -67,12 +94,24 @@ texture_pressed = ExtResource("13_jon7d")
 texture_hover = ExtResource("14_y6hpc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5ukil")
+}
+script = ExtResource("15_6obb6")
 
 [node name="SonarLine" type="Sprite2D" parent="."]
-position = Vector2(997, 129)
+position = Vector2(996.989, 176.035)
+rotation = 6.02139
+scale = Vector2(0.690617, 0.547847)
 texture = ExtResource("15_131t4")
+offset = Vector2(-3.6, -100)
 
 [node name="SonarForeground" type="Sprite2D" parent="."]
-position = Vector2(987, 162)
-scale = Vector2(0.655, 0.655)
+position = Vector2(985, 165.5)
+scale = Vector2(0.679, 0.677)
 texture = ExtResource("16_nsvsp")
+
+[connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CreditsButton" to="." method="_on_credits_button_pressed"]
