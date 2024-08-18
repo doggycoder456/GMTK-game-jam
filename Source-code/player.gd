@@ -1,6 +1,6 @@
 extends CharacterBody2D
-signal hit;
-
+signal hit
+signal dead
 @export var player_speed = 300
 @export var max_player_health  = 100
 @export var current_player_health = max_player_health
@@ -8,12 +8,10 @@ signal hit;
 var screensize;
 
 func start():
-	show()
 	screensize = get_viewport_rect().size
-	if (position.x != screensize.x / 4 && position.y != screensize.y / 2):
-		position.x = screensize.x / 6
-		position.y = (screensize.y / 2)
-	$CollisionShape2D.disabled = false
+	position.x = screensize.x / 6
+	position.y = (screensize.y / 2)
+	current_player_health = max_player_health
 		
 func _ready():
 	start()
@@ -38,6 +36,7 @@ func _process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screensize)
 	
+		
 
 
 
@@ -46,6 +45,8 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	hit.emit()
-	print(hit)
+	if current_player_health <= 0:
+		dead.emit()
+		
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
