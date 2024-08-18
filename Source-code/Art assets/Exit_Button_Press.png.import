@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq6gp30aeo028"
-path="res://.godot/imported/Start Button Idle.png-9dade993b995da21c7cabd5116ce0d33.ctex"
+uid="uid://b1344n6f3wxer"
+path="res://.godot/imported/Exit_Button_Press.png-e758ad1b7a8466ab58478b57ee262f4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Start Button Idle.png"
-dest_files=["res://.godot/imported/Start Button Idle.png-9dade993b995da21c7cabd5116ce0d33.ctex"]
+source_file="res://Art assets/Exit_Button_Press.png"
+dest_files=["res://.godot/imported/Exit_Button_Press.png-e758ad1b7a8466ab58478b57ee262f4d.ctex"]
 
 [params]
 
