@@ -48,11 +48,22 @@ func playerGotDamaged(amountOfDamage):
 
 
 func _on_area_2d_area_entered(area):
-	if Menu.isGameRunning == true:
-		hit.emit()
+	hit.emit()
+	
+	if current_player_health <= 0:
+		dead.emit()
+	
+	# Must be deferred as we can't change physics properties on a physics callback.
+	$CollisionShape2D.set_deferred("disabled", true)
+
+
+func _on_area_2d_body_entered(body):
+	
+	# If the player collides with the projectile body, destroy the projectile and decrease player's health
+	if body.is_in_group("Projectile"):
+		body.queue_free()
 		
-		if current_player_health <= 0:
-			dead.emit()
+		current_player_health -= 2
 		
 		# Must be deferred as we can't change physics properties on a physics callback.
 		$CollisionShape2D.set_deferred("disabled", true)
