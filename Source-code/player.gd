@@ -67,3 +67,19 @@ func _on_area_2d_body_entered(body):
 		
 		# Must be deferred as we can't change physics properties on a physics callback.
 		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# For now, the player will take damage if it collides with the enemy
+	if body.is_in_group("Enemy"):
+		
+		current_player_health -= 1
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# For now, the player will take damage if it collides with the enemy boss
+	if body.is_in_group("EnemyBoss"):
+		
+		current_player_health -= 20
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
