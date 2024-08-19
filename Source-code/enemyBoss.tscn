@@ -1,14 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://qu7235nhbjn"]
+[gd_scene load_steps=3 format=3 uid="uid://qu7235nhbjn"]
 
 [ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="1_jcqq0"]
-[ext_resource type="Texture2D" uid="uid://c0wpuoglqd3wk" path="res://Art assets/Spaceship1.png" id="2_asu70"]
 [ext_resource type="Script" path="res://enemyBoss.gd" id="2_glsc6"]
 
 [node name="EnemyBoss" instance=ExtResource("1_jcqq0")]
 script = ExtResource("2_glsc6")
-
-[node name="EnemySprite" parent="." index="0"]
-texture = ExtResource("2_asu70")
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(-7.15256e-07, 4.76837e-07)

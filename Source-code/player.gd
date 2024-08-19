@@ -48,9 +48,11 @@ func playerGotDamaged(amountOfDamage):
 
 
 func _on_area_2d_area_entered(area):
-	hit.emit()
-	if current_player_health <= 0:
-		dead.emit()
+	if Main.isGameRunning == true:
+		hit.emit()
 		
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
+		if current_player_health <= 0:
+			dead.emit()
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)

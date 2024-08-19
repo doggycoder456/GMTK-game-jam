@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_bpmro"]
 [ext_resource type="Script" path="res://Main.gd" id="1_th16n"]
-[ext_resource type="PackedScene" uid="uid://bqfqqfysdak6h" path="res://ProjectileSpawner.tscn" id="2_tt51p"]
+[ext_resource type="PackedScene" uid="uid://b1itcdsb8wnh4" path="res://Projectile.tscn" id="2_gmh2v"]
 [ext_resource type="PackedScene" uid="uid://dbapln3oi8kp0" path="res://Hud.tscn" id="3_ef31k"]
 [ext_resource type="Script" path="res://HealthBar.gd" id="5_ak8dl"]
 [ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="6_ce3wa"]
@@ -11,13 +11,11 @@
 position = Vector2(1, 0)
 script = ExtResource("1_th16n")
 
+[node name="Projectile" parent="." instance=ExtResource("2_gmh2v")]
+
 [node name="Player" parent="." instance=ExtResource("1_bpmro")]
 scale = Vector2(3.17, 3.17)
 collision_mask = 2
-
-[node name="ProjectileSpawner" parent="." instance=ExtResource("2_tt51p")]
-position = Vector2(949, 355)
-rotation = -1.5708
 
 [node name="HUD" parent="." instance=ExtResource("3_ef31k")]
 
