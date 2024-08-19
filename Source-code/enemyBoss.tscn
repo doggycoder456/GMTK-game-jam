@@ -3,9 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="1_jcqq0"]
 [ext_resource type="Script" path="res://enemyBoss.gd" id="2_glsc6"]
 
-[node name="EnemyBoss" instance=ExtResource("1_jcqq0")]
+[node name="EnemyBoss" groups=["EnemyBoss"] instance=ExtResource("1_jcqq0")]
 script = ExtResource("2_glsc6")
+enemyBossHealth = 300
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(-7.15256e-07, 4.76837e-07)
 scale = Vector2(2, 2)
+
+[node name="EnemyHealthBar" parent="." index="5"]
+max_value = 300.0
