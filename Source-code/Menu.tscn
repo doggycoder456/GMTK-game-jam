@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dja8sr2hkb8c3"]
+[gd_scene load_steps=23 format=3 uid="uid://dja8sr2hkb8c3"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_0mf3w"]
 [ext_resource type="Texture2D" uid="uid://um1fcr6ky3k2" path="res://Art assets/Menu Background.png" id="1_h8ale"]
@@ -17,6 +17,8 @@
 [ext_resource type="Script" path="res://AnimationPlayer.gd" id="15_6obb6"]
 [ext_resource type="Texture2D" uid="uid://bk5umkd7dsy6n" path="res://Art assets/Sonar_Line.png" id="15_131t4"]
 [ext_resource type="Texture2D" uid="uid://yrnxvx11l6uq" path="res://Art assets/Sonar_Foreground.png" id="16_nsvsp"]
+[ext_resource type="AudioStream" uid="uid://diaogpcwohs8c" path="res://Music-Assets/Menu.mp3" id="18_tob5f"]
+[ext_resource type="AudioStream" uid="uid://cx1knbe3bg6h4" path="res://Music-Assets/StartMusic.mp3" id="19_687xk"]
 
 [sub_resource type="Animation" id="Animation_t8at4"]
 length = 0.001
@@ -111,6 +113,14 @@ position = Vector2(985, 165.5)
 scale = Vector2(0.679, 0.677)
 texture = ExtResource("16_nsvsp")
 
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_tob5f")
+
+[node name="StartMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_687xk")
+
+[connection signal="button_up" from="CanvasLayer/StartButton" to="." method="_on_start_button_button_up"]
+[connection signal="mouse_entered" from="CanvasLayer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/SettingsButton" to="." method="_on_settings_button_pressed"]
