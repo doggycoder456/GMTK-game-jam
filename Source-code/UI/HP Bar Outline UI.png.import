@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://bpmmankdr28ln"
+path="res://.godot/imported/HP Bar Outline UI.png-e394248b5c3b7150dee15b469cc0b77e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://UI/HP Bar Outline UI.png"
+dest_files=["res://.godot/imported/HP Bar Outline UI.png-e394248b5c3b7150dee15b469cc0b77e.ctex"]
 
 [params]
 

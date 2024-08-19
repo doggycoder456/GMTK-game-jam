@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://dnl8jp1w7g3e"
+path="res://.godot/imported/Ammo Rocket Launcher UI.png-bbc9978b6a0bfb1f1f398e7ebdd8a2dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://UI/Ammo Rocket Launcher UI.png"
+dest_files=["res://.godot/imported/Ammo Rocket Launcher UI.png-bbc9978b6a0bfb1f1f398e7ebdd8a2dc.ctex"]
 
 [params]
 

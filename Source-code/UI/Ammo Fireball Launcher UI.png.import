@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://3wsw8vblle1h"
+path="res://.godot/imported/Ammo Fireball Launcher UI.png-1b649eb8b78049d25849fd62b9b78956.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://UI/Ammo Fireball Launcher UI.png"
+dest_files=["res://.godot/imported/Ammo Fireball Launcher UI.png-1b649eb8b78049d25849fd62b9b78956.ctex"]
 
 [params]
 

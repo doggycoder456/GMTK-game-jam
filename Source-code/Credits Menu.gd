@@ -6,10 +6,6 @@ var timeToEndCredits
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#pass # Replace with function body.
-	
-	# Start the end credits timer to 0 first
-	timeToEndCredits = 0.0
 	
 	$"ScrollContainer/VBoxContainer/Control/CreditsMenuLabel".text = "Credits Menu"
 	$"ScrollContainer/VBoxContainer/Control/CreditsMenuLabel".vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -77,14 +73,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#pass
-	
-	# Increment the end credits timer by delta
-	timeToEndCredits += delta
 	
 	# Scroll to the bottom of the container by 1 each frame
 	$"ScrollContainer".scroll_vertical += 1
 	
-	# If the end credits timer is greater than 12 seconds, transition to the main scene
-	if timeToEndCredits >= 12.0:
-		get_tree().change_scene_to_file("res://Main.tscn")
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://Main.tscn")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://ccw45ymvbkiix"
+path="res://.godot/imported/Secondary Weapon UI.png-84d48a2fb1a516e07b8e016e57afe042.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://UI/Secondary Weapon UI.png"
+dest_files=["res://.godot/imported/Secondary Weapon UI.png-84d48a2fb1a516e07b8e016e57afe042.ctex"]
 
 [params]
 

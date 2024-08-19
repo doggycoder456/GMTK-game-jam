@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://cil705hbvr2ua"
+path="res://.godot/imported/Start_Button_Press.png-4f9e266706a029d560a7a95b80e7a50a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://Art assets/Start_Button_Press.png"
+dest_files=["res://.godot/imported/Start_Button_Press.png-4f9e266706a029d560a7a95b80e7a50a.ctex"]
 
 [params]
 

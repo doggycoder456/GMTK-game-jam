@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://by3x0qnndkgjv"
+path="res://.godot/imported/Ammo Laser Gun UI.png-699dcabc6fc724688f1d25b3d7b56279.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://UI/Ammo Laser Gun UI.png"
+dest_files=["res://.godot/imported/Ammo Laser Gun UI.png-699dcabc6fc724688f1d25b3d7b56279.ctex"]
 
 [params]
 

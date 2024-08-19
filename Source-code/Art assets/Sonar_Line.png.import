@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d6pvflupt1t"
-path="res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"
+uid="uid://bk5umkd7dsy6n"
+path="res://.godot/imported/Sonar_Line.png-cce75f8ed02643e13724d5051a83aaad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art assets/Settings Button Hover.png"
-dest_files=["res://.godot/imported/Settings Button Hover.png-700843d9478cbbca762334b146cbccb8.ctex"]
+source_file="res://Art assets/Sonar_Line.png"
+dest_files=["res://.godot/imported/Sonar_Line.png-cce75f8ed02643e13724d5051a83aaad.ctex"]
 
 [params]
 
