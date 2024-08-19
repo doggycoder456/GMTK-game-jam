@@ -1,10 +1,15 @@
+class_name Menu
+
 extends Node2D
 
+static var isGameRunning : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	 # Replace with function body.
 	$MenuMusic.play()
+	
+	isGameRunning = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

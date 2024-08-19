@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://HealthBar.gd" id="3_ykel8"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("3_ykel8")
 
 [node name="HealthBar" type="TextureProgressBar" parent="."]
 anchors_preset = 5
@@ -18,4 +19,3 @@ value = 100.0
 texture_under = ExtResource("1_osmyv")
 texture_progress = ExtResource("2_133jt")
 texture_progress_offset = Vector2(6, 4)
-script = ExtResource("3_ykel8")

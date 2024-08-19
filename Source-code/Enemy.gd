@@ -15,18 +15,18 @@ func _ready():
 	$CooldownProjectileTimer.wait_time = randi_range(1, 3)
 
 func _process(delta):
-	if playerCollidedWithEnemy != null and Main.isGameRunning == true:
+	if playerCollidedWithEnemy != null and Menu.isGameRunning == true:
 		playerCollidedWithEnemy.playerGotDamaged(3)
 		#print("Enemy hit player")
 	
 	
 
 func _physics_process(delta):
-	if Main.isGameRunning == true:
+	if Menu.isGameRunning == true:
 		position.x -= horizontalSpeed * delta
 
 func enemyDamaged(damageAmount):
-	if Main.isGameRunning == true:
+	if Menu.isGameRunning == true:
 		enemyHealth == damageAmount
 		
 		if enemyHealth <= 0:
@@ -42,17 +42,17 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 
 func _on_area_2d_body_entered(body):
-	if body is Player and Main.isGameRunning == true:
+	if body is Player and Menu.isGameRunning == true:
 		playerCollidedWithEnemy = body
 
 
 func _on_area_2d_body_exited(body):
-	if body is Player and Main.isGameRunning == true:
+	if body is Player and Menu.isGameRunning == true:
 		playerCollidedWithEnemy = null
 
 
 func _on_cooldown_projectile_timer_timeout():
-	if Main.isGameRunning == true:
+	if Menu.isGameRunning == true:
 		shootProjectile()
 		
 		$CooldownProjectileTimer.wait_time = randi_range(1, 3)

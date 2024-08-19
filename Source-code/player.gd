@@ -2,8 +2,8 @@ class_name Player
 
 extends CharacterBody2D
 
-signal hit
-signal dead
+signal hit;
+signal dead;
 
 @export var player_speed = 300
 @export var max_player_health  = 100
@@ -48,7 +48,7 @@ func playerGotDamaged(amountOfDamage):
 
 
 func _on_area_2d_area_entered(area):
-	if Main.isGameRunning == true:
+	if Menu.isGameRunning == true:
 		hit.emit()
 		
 		if current_player_health <= 0:

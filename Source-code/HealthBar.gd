@@ -1,4 +1,4 @@
-extends TextureProgressBar
+extends CanvasLayer
 @export var player: CharacterBody2D
 
 func _ready():
@@ -6,5 +6,5 @@ func _ready():
 	update()
 
 func update():
-	value = player.current_player_health * 100 / player.max_player_health
+	$HealthBar.value = player.current_player_health * 100 / player.max_player_health
 	
