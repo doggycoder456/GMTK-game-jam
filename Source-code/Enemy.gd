@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var horizontalSpeed = 200.0
 @export var enemyHealth = 100
 
-@onready var game = get_tree().get_root().get_node("Game")
+@onready var game = get_tree().get_root().get_node("Game") # asteroid file is not here
 @onready var loadProjectile = load("res://Projectile.tscn")
 
 func _ready():
@@ -16,9 +16,6 @@ func _ready():
 func _process(delta):
 	
 	$EnemyHealthBar.value = enemyHealth
-	
-	# Simple enemy damage
-	enemyHealth -= 50 * delta
 	
 	# Destroy the enemy when their health is at 0
 	if enemyHealth <= 0:
@@ -31,7 +28,7 @@ func _physics_process(delta):
 
 func shootProjectile():
 	var instance = loadProjectile.instantiate()
-	instance.spawnPosition = global_position - Vector2(-3.0, 25.0)
+	instance.spawnPosition = global_position - instance.position
 	game.add_child.call_deferred(instance)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

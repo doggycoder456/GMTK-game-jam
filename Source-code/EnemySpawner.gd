@@ -18,7 +18,7 @@ func _ready():
 
 func _on_enemy_spawner_timer_timeout():
 	# Spawn any enemy
-	var randomizeEnemyY = randf_range(get_viewport_rect().position.x, get_viewport_rect().end.x)
+	var randomizeEnemyY = randf_range(get_viewport_rect().position.x + 50, get_viewport_rect().end.x - 50)
 	var loadEnemy = instantiateEnemies[randi() % instantiateEnemies.size()]
 	var enemy: Enemy = loadEnemy.instantiate()
 	enemy.position = Vector2(position.x, randomizeEnemyY)

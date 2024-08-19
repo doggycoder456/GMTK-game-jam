@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnm7gclmb4asw"]
+
+[ext_resource type="Script" path="res://Asteroid.gd" id="1_srjt2"]
+
+[node name="Asteroid" type="CharacterBody2D"]
+script = ExtResource("1_srjt2")
+
+[node name="AsteroidSprite" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://dirwbyida7ija"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_vud4v"]
-[ext_resource type="Texture2D" uid="uid://c0wpuoglqd3wk" path="res://Art assets/Spaceship1.png" id="2_gwl7w"]
+[ext_resource type="Texture2D" uid="uid://dlrapud8udp8b" path="res://Art assets/Spaceship_Goon.webp" id="2_hyiry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vckbn"]
-radius = 23.0
+radius = 13.6076
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_873h4"]
-radius = 23.0
+radius = 13.6076
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fjar"]
 bg_color = Color(1, 0, 0, 1)
@@ -16,10 +16,12 @@ bg_color = Color(1, 0, 0, 1)
 bg_color = Color(0, 1, 0, 1)
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+rotation = -1.5708
+scale = Vector2(1.545, 1.545)
 script = ExtResource("1_vud4v")
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_gwl7w")
+texture = ExtResource("2_hyiry")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
@@ -27,8 +29,8 @@ texture = ExtResource("2_gwl7w")
 shape = SubResource("CircleShape2D_vckbn")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-4.76837e-07, 4.76837e-07)
-scale = Vector2(1.8, 1.4)
+position = Vector2(-0.286048, 0.514881)
+scale = Vector2(1.13065, 1.55446)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_873h4")
@@ -37,10 +39,11 @@ shape = SubResource("CircleShape2D_873h4")
 autostart = true
 
 [node name="EnemyHealthBar" type="ProgressBar" parent="."]
-offset_left = -25.0
+offset_left = 25.0
 offset_top = -25.0
-offset_right = 25.0
+offset_right = 75.0
 offset_bottom = -20.0
+rotation = 1.5708
 theme_override_styles/background = SubResource("StyleBoxFlat_2fjar")
 theme_override_styles/fill = SubResource("StyleBoxFlat_526bj")
 step = 1.0
