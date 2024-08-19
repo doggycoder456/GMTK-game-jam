@@ -10,8 +10,6 @@ radius = 23.0
 radius = 23.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
-scale = Vector2(3, 3)
-collision_mask = 0
 script = ExtResource("1_vud4v")
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
