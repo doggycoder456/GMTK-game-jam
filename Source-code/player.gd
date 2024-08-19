@@ -1,6 +1,10 @@
+class_name Player
+
 extends CharacterBody2D
-signal hit
-signal dead
+
+signal hit;
+signal dead;
+
 @export var player_speed = 300
 @export var max_player_health  = 100
 @export var current_player_health = max_player_health
@@ -35,18 +39,20 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screensize)
+
+
+func playerGotDamaged(amountOfDamage):
 	
-		
-
-
-
+	current_player_health -= amountOfDamage
 
 
 
 func _on_area_2d_area_entered(area):
-	hit.emit()
-	if current_player_health <= 0:
-		dead.emit()
+	if Menu.isGameRunning == true:
+		hit.emit()
 		
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
+		if current_player_health <= 0:
+			dead.emit()
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)

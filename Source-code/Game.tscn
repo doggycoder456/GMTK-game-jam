@@ -10,4 +10,5 @@ script = ExtResource("1_k7yat")
 
 [node name="Player" parent="." instance=ExtResource("2_xsv2c")]
 
-[node name="CanvasLayer" parent="." instance=ExtResource("3_yuy5o")]
+[node name="CanvasLayer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_yuy5o")]
+player = NodePath("../Player")

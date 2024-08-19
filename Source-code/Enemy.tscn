@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dirwbyida7ija"]
+
+[ext_resource type="Script" path="res://Enemy.gd" id="1_vud4v"]
+[ext_resource type="Texture2D" uid="uid://c0wpuoglqd3wk" path="res://Art assets/Spaceship1.png" id="2_gwl7w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vckbn"]
+radius = 23.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_873h4"]
+radius = 23.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+scale = Vector2(3, 3)
+collision_mask = 0
+script = ExtResource("1_vud4v")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_gwl7w")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vckbn")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-4.76837e-07, 4.76837e-07)
+scale = Vector2(1.8, 1.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_873h4")
+
+[node name="CooldownProjectileTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="CooldownProjectileTimer" to="." method="_on_cooldown_projectile_timer_timeout"]
