@@ -23,6 +23,7 @@ script = ExtResource("5_clrts")
 one_shot = true
 
 [node name="AsteroidSpawner" type="Node2D" parent="."]
+position = Vector2(1700, 300)
 script = ExtResource("5_vdtkn")
 
 [node name="AsteroidSpawnerTimer" type="Timer" parent="AsteroidSpawner"]
