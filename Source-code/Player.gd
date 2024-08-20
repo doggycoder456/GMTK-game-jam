@@ -47,6 +47,7 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screensize)
+	
 
 func shootProjectile():
 	var instance = loadProjectile.instantiate()
