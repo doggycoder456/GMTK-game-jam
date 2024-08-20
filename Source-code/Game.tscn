@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=6 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_k7yat"]
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="2_xsv2c"]
 [ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="3_yuy5o"]
-[ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="4_4b687"]
+[ext_resource type="Script" path="res://EnemySpawner.gd" id="5_clrts"]
+[ext_resource type="Script" path="res://AsteroidSpawner.gd" id="5_vdtkn"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(1, 0)
@@ -14,5 +15,17 @@ script = ExtResource("1_k7yat")
 [node name="CanvasLayer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_yuy5o")]
 player = NodePath("../Player")
 
-[node name="Enemy" parent="." instance=ExtResource("4_4b687")]
-position = Vector2(999, 201)
+[node name="EnemySpawner" type="Node2D" parent="."]
+position = Vector2(1300, 300)
+script = ExtResource("5_clrts")
+
+[node name="EnemySpawnerTimer" type="Timer" parent="EnemySpawner"]
+one_shot = true
+
+[node name="AsteroidSpawner" type="Node2D" parent="."]
+script = ExtResource("5_vdtkn")
+
+[node name="AsteroidSpawnerTimer" type="Timer" parent="AsteroidSpawner"]
+
+[connection signal="timeout" from="EnemySpawner/EnemySpawnerTimer" to="EnemySpawner" method="_on_enemy_spawner_timer_timeout"]
+[connection signal="timeout" from="AsteroidSpawner/AsteroidSpawnerTimer" to="AsteroidSpawner" method="_on_asteroid_spawner_timer_timeout"]
