@@ -2,6 +2,8 @@ class_name BossFightSpawner
 
 extends Node2D
 
+var bossSpeed = 200.0
+
 # Instantiate the asteroid here
 var instantiateBossFight := preload("res://enemyBoss.tscn")
 
@@ -18,3 +20,10 @@ func _process(delta):
 	theEnemyBoss.position = Vector2(position.x, position.y)
 	get_tree().current_scene.add_child(theEnemyBoss)
 	
+	position.y += bossSpeed * delta
+	
+	if position.y >= 500:
+		bossSpeed = -200.0
+	
+	if position.y <= 100:
+		bossSpeed = 200.0

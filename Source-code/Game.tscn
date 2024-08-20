@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=9 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_k7yat"]
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="2_xsv2c"]
 [ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="3_yuy5o"]
 [ext_resource type="PackedScene" uid="uid://bg1uh43lc0ubg" path="res://parallax_background.tscn" id="4_5g25x"]
+[ext_resource type="AudioStream" uid="uid://bxkd0th0x53ui" path="res://Music-Assets/Saturn - Advance (In Combat).ogg" id="4_im7ja"]
 [ext_resource type="Script" path="res://EnemySpawner.gd" id="5_mb8vi"]
 [ext_resource type="Script" path="res://SaturnSpawner.gd" id="6_2jkwt"]
 [ext_resource type="PackedScene" uid="uid://dxh30hnrussng" path="res://DistanceToSaturn.tscn" id="7_wy1tp"]
@@ -18,8 +19,7 @@ script = ExtResource("1_k7yat")
 player = NodePath("../Player")
 
 [node name="Combat Music" type="AudioStreamPlayer" parent="."]
-
-[node name="Out of Combat Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_im7ja")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_5g25x")]
 scroll_ignore_camera_zoom = true

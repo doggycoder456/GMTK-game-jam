@@ -15,4 +15,5 @@ func _ready():
 	Level3.isPlayerInLevel3 = false
 
 func _process(delta):
-	pass
+	if !$"Combat Music".playing:
+		$"Combat Music".play()

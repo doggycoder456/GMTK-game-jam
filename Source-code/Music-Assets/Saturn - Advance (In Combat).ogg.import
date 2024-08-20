@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxkd0th0x53ui"
+path="res://.godot/imported/Saturn - Advance (In Combat).ogg-e19e0cf3848119d7ef8ea0d56a79c263.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music-Assets/Saturn - Advance (In Combat).ogg"
+dest_files=["res://.godot/imported/Saturn - Advance (In Combat).ogg-e19e0cf3848119d7ef8ea0d56a79c263.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbe7wrcusyyj3"
+path="res://.godot/imported/Saturn - Final Boss w tail.ogg-239d18c72c8b1bcc8cbd510ef4150b7d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music-Assets/Saturn - Final Boss w tail.ogg"
+dest_files=["res://.godot/imported/Saturn - Final Boss w tail.ogg-239d18c72c8b1bcc8cbd510ef4150b7d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
