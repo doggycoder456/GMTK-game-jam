@@ -18,3 +18,7 @@ player = NodePath("../Player")
 [node name="Out of Combat Music" type="AudioStreamPlayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
