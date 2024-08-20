@@ -125,8 +125,6 @@ func _on_area_2d_body_entered(body):
 		
 		scale -= Vector2(0.5, 0.5)
 		
-		print("Player hit asteroid 4")
-		
 		if scale <= Vector2(0.5, 0.5):
 			scale = Vector2(0.5, 0.5)
 		

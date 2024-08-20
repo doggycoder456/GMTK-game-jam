@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkoo0mgbgneo7"]
+[gd_scene load_steps=8 format=3 uid="uid://bkoo0mgbgneo7"]
 
 [ext_resource type="Script" path="res://Level2.gd" id="1_6qy33"]
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_s3joq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://AsteroidSpawner.gd" id="4_343bd"]
 [ext_resource type="Script" path="res://SaturnSpawner.gd" id="5_gr5ic"]
 [ext_resource type="PackedScene" uid="uid://dxh30hnrussng" path="res://DistanceToSaturn.tscn" id="6_p0pjd"]
+[ext_resource type="PackedScene" uid="uid://bg1uh43lc0ubg" path="res://parallax_background.tscn" id="7_g0pl5"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_6qy33")
@@ -28,5 +29,7 @@ script = ExtResource("5_gr5ic")
 [node name="DistanceToSaturn" parent="." node_paths=PackedStringArray("player", "saturn") instance=ExtResource("6_p0pjd")]
 player = NodePath("../Player")
 saturn = NodePath("../SaturnSpawner")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("7_g0pl5")]
 
 [connection signal="timeout" from="AsteroidSpawner/AsteroidSpawnerTimer" to="AsteroidSpawner" method="_on_asteroid_spawner_timer_timeout"]

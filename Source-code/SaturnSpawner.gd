@@ -2,7 +2,7 @@ class_name SaturnSpawner
 
 extends Node2D
 
-var saturnSpeed = 200.0
+var saturnSpeed = 50.0
 
 # Instantiate saturn here
 var instantiateSaturn := preload("res://Saturn.tscn")
