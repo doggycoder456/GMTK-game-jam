@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkoo0mgbgneo7"]
+
+[ext_resource type="Script" path="res://Level2.gd" id="1_6qy33"]
+[ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_s3joq"]
+[ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="2_rb5r4"]
+[ext_resource type="Script" path="res://AsteroidSpawner.gd" id="4_343bd"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_6qy33")
+
+[node name="Player" parent="." instance=ExtResource("1_s3joq")]
+
+[node name="CanvasLayer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_rb5r4")]
+player = NodePath("../Player")
+
+[node name="AsteroidSpawner" type="Node2D" parent="."]
+position = Vector2(600, -100)
+script = ExtResource("4_343bd")
+
+[node name="AsteroidSpawnerTimer" type="Timer" parent="AsteroidSpawner"]
+
+[connection signal="timeout" from="AsteroidSpawner/AsteroidSpawnerTimer" to="AsteroidSpawner" method="_on_asteroid_spawner_timer_timeout"]

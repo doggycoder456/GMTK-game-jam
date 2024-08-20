@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var horizontalSpeed = 200.0
 @export var enemyHealth = 100
 
-@onready var game = get_tree().get_root().get_node("Game") # asteroid file is not here
+@onready var game = get_tree().get_root().get_node("Game")
 @onready var loadProjectile = load("res://Projectile.tscn")
 
 func _ready():
