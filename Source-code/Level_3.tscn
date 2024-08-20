@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://coljjupfe5h44"]
+
+[ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_e5wp1"]
+[ext_resource type="Script" path="res://Level3.gd" id="1_jryx2"]
+[ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="2_v3o15"]
+[ext_resource type="Script" path="res://BossFightSpawner.gd" id="3_pvwxd"]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_jryx2")
+
+[node name="Player" parent="." instance=ExtResource("1_e5wp1")]
+
+[node name="CanvasLayer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_v3o15")]
+player = NodePath("../Player")
+
+[node name="BossFightSpawner" type="Node2D" parent="."]
+position = Vector2(1000, 300)
+script = ExtResource("3_pvwxd")

@@ -6,11 +6,19 @@ extends Enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$EnemyHealthBar.value = enemyBossHealth
+	$EnemyHealthBar.hide()
+	$EnemyBossCanvas/EnemyBossHealthBar.value = enemyBossHealth
 	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$EnemyBossCanvas/EnemyBossHealthBar.value = enemyBossHealth
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("PlayerProjectile"):
+		enemyBossHealth -= 10
+		body.queue_free()
+		
+		$CollisionShape2D.set_deferred("disabled", true) # Replace with function body.

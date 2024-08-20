@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cern3rxmbo3tl"]
+[gd_scene load_steps=8 format=3 uid="uid://cern3rxmbo3tl"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_k7yat"]
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="2_xsv2c"]
 [ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="3_yuy5o"]
 [ext_resource type="PackedScene" uid="uid://bg1uh43lc0ubg" path="res://parallax_background.tscn" id="4_5g25x"]
+[ext_resource type="Script" path="res://EnemySpawner.gd" id="5_mb8vi"]
+[ext_resource type="Script" path="res://SaturnSpawner.gd" id="6_2jkwt"]
+[ext_resource type="PackedScene" uid="uid://dxh30hnrussng" path="res://DistanceToSaturn.tscn" id="7_wy1tp"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(1, 0)
@@ -20,3 +23,19 @@ player = NodePath("../Player")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_5g25x")]
 scroll_ignore_camera_zoom = true
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+position = Vector2(1300, 300)
+script = ExtResource("5_mb8vi")
+
+[node name="EnemySpawnerTimer" type="Timer" parent="EnemySpawner"]
+
+[node name="SaturnSpawner" type="Node2D" parent="."]
+position = Vector2(6000, 300)
+script = ExtResource("6_2jkwt")
+
+[node name="DistanceToSaturn" parent="." node_paths=PackedStringArray("player", "saturn") instance=ExtResource("7_wy1tp")]
+player = NodePath("../Player")
+saturn = NodePath("../SaturnSpawner")
+
+[connection signal="timeout" from="EnemySpawner/EnemySpawnerTimer" to="EnemySpawner" method="_on_enemy_spawner_timer_timeout"]

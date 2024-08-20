@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw7dsy32qsk1d"]
+
+[ext_resource type="PackedScene" uid="uid://dnm7gclmb4asw" path="res://Asteroid1.tscn" id="1_njvbc"]
+[ext_resource type="Texture2D" uid="uid://pkcd2v6f6bqd" path="res://Asteroid 2.png" id="2_br45v"]
+
+[node name="Asteroid2" groups=["Asteroid2"] instance=ExtResource("1_njvbc")]
+
+[node name="AsteroidSprite" parent="." index="0"]
+texture = ExtResource("2_br45v")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-2.5, 0)
+
+[node name="CollisionShape2D" parent="." index="3"]
+position = Vector2(-2.5, 0)
