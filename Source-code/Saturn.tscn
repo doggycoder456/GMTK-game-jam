@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfd07hub2jtyn"]
+
+[ext_resource type="Texture2D" uid="uid://8hnpxqi57nql" path="res://Art assets/Saturn1.png" id="1_osugk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44pbw"]
+radius = 134.034
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2iy0"]
+radius = 135.004
+
+[node name="Saturn" type="CharacterBody2D" groups=["Saturn"]]
+
+[node name="SaturnSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_osugk")
+
+[node name="Area2D" type="Area2D" parent="SaturnSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SaturnSprite/Area2D"]
+position = Vector2(9, -7)
+shape = SubResource("CircleShape2D_44pbw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -7)
+shape = SubResource("CircleShape2D_e2iy0")

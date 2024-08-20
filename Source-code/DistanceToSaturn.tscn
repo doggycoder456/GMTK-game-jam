@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxh30hnrussng"]
+
+[ext_resource type="Script" path="res://DistanceToSaturn.gd" id="1_1vau1"]
+[ext_resource type="Texture2D" uid="uid://8hnpxqi57nql" path="res://Art assets/Saturn1.png" id="1_oix4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_np208"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fsk5t"]
+texture = ExtResource("1_oix4i")
+
+[node name="DistanceToSaturn" type="CanvasLayer"]
+script = ExtResource("1_1vau1")
+
+[node name="SaturnProgressBar" type="ProgressBar" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 60.0
+offset_bottom = 210.0
+theme_override_styles/background = SubResource("StyleBoxFlat_np208")
+theme_override_styles/fill = SubResource("StyleBoxTexture_fsk5t")
+max_value = 6000.0
+step = 1.0
+fill_mode = 3
+show_percentage = false

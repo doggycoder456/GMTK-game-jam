@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c0wpuoglqd3wk" path="res://Art assets/Spaceship1.png" id="2_gwl7w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vckbn"]
-radius = 23.0
+radius = 136.588
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_873h4"]
-radius = 23.0
+radius = 132.52
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fjar"]
 bg_color = Color(1, 0, 0, 1)

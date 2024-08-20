@@ -1,15 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://qu7235nhbjn"]
+[gd_scene load_steps=6 format=3 uid="uid://qu7235nhbjn"]
 
 [ext_resource type="PackedScene" uid="uid://dirwbyida7ija" path="res://Enemy.tscn" id="1_jcqq0"]
 [ext_resource type="Script" path="res://enemyBoss.gd" id="2_glsc6"]
+[ext_resource type="Texture2D" uid="uid://8hnpxqi57nql" path="res://Art assets/Saturn1.png" id="3_iv2am"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4q0a"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmba5"]
+bg_color = Color(0, 1, 0, 1)
 
 [node name="EnemyBoss" groups=["EnemyBoss"] instance=ExtResource("1_jcqq0")]
 script = ExtResource("2_glsc6")
 enemyBossHealth = 300
 
+[node name="EnemySprite" parent="." index="0"]
+texture = ExtResource("3_iv2am")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(8.94309, -10.5691)
+
 [node name="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(-7.15256e-07, 4.76837e-07)
 scale = Vector2(2, 2)
 
+[node name="CollisionShape2D" parent="." index="3"]
+position = Vector2(10.5691, -6.50406)
+
 [node name="EnemyHealthBar" parent="." index="5"]
 max_value = 300.0
+value = 300.0
+
+[node name="EnemyBossCanvas" type="CanvasLayer" parent="." index="6"]
+
+[node name="EnemyBossHealthBar" type="ProgressBar" parent="EnemyBossCanvas" index="0"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 20.0
+offset_right = 124.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a4q0a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vmba5")
+max_value = 300.0
+step = 1.0
+show_percentage = false

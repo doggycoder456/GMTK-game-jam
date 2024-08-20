@@ -10,6 +10,7 @@ signal dead;
 @export var current_player_health = max_player_health
 @onready var loadProjectile = load("res://PlayerProjectile.tscn")
 @onready var game = get_tree().get_root().get_node("Game")
+@onready var level3 = get_tree().get_root().get_node("Level3")
 var screensize;
 
 func start():
@@ -47,11 +48,18 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screensize)
+	
 
 func shootProjectile():
-	var instance = loadProjectile.instantiate()
-	instance.spawnPosition = global_position + instance.position * 10
-	game.add_child.call_deferred(instance)
+	if Game.isPlayerInLevel1 == true and Level2.isPlayerInLevel2 == false:
+		var instance = loadProjectile.instantiate()
+		instance.spawnPosition = global_position + instance.position * 10
+		game.add_child.call_deferred(instance)
+	
+	if Level3.isPlayerInLevel3 == true:
+		var instance = loadProjectile.instantiate()
+		instance.spawnPosition = global_position + instance.position * 10
+		level3.add_child.call_deferred(instance)
 
 
 func playerGotDamaged(amountOfDamage):
@@ -72,6 +80,63 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("Projectile"):
 		body.queue_free()
 		current_player_health -= 2
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	if body.is_in_group("Asteroid1"):
+		
+		current_player_health -= 10
+		
+		scale += Vector2(0.5, 0.5)
+		
+		if scale >= Vector2(5.0, 5.0):
+			scale = Vector2(5.0, 5.0)
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# If the player collides with the asteroid body, decrease player's scale
+	if body.is_in_group("Asteroid2"):
+		
+		scale -= Vector2(0.25, 0.25)
+		
+		if scale <= Vector2(0.5, 0.5):
+			scale = Vector2(0.5, 0.5)
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# If the player collides with the asteroid body, decrease player's health and increase the scale
+	if body.is_in_group("Asteroid3"):
+		
+		current_player_health -= 5
+		
+		scale += Vector2(0.25, 0.25)
+		
+		if scale >= Vector2(5.0, 5.0):
+			scale = Vector2(5.0, 5.0)
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# If the player collides with the asteroid body, decrease player's scale
+	if body.is_in_group("Asteroid4"):
+		
+		scale -= Vector2(0.5, 0.5)
+		
+		print("Player hit asteroid 4")
+		
+		if scale <= Vector2(0.5, 0.5):
+			scale = Vector2(0.5, 0.5)
+		
+		# Must be deferred as we can't change physics properties on a physics callback.
+		$CollisionShape2D.set_deferred("disabled", true)
+	
+	# For now, take the player back to the main menu after they collided with Saturn
+	if body.is_in_group("Saturn"):
+		
+		get_tree().change_scene_to_file("res://Menu.tscn")
 		
 		# Must be deferred as we can't change physics properties on a physics callback.
 		$CollisionShape2D.set_deferred("disabled", true)

@@ -5,7 +5,8 @@ extends CharacterBody2D
 @export var horizontalSpeed = 200.0
 @export var enemyHealth = 100
 
-@onready var game = get_tree().get_root().get_node("Game") # asteroid file is not here
+@onready var game = get_tree().get_root().get_node("Game")
+@onready var level3 = get_tree().get_root().get_node("Level3")
 @onready var loadProjectile = load("res://Projectile.tscn")
 
 func _ready():
@@ -26,9 +27,15 @@ func _physics_process(delta):
 	position.x -= horizontalSpeed * delta
 	
 func shootProjectile():
-	var instance = loadProjectile.instantiate()
-	instance.spawnPosition = global_position - instance.position
-	game.add_child.call_deferred(instance)
+	if Game.isPlayerInLevel1 == true and Level2.isPlayerInLevel2 == false:
+		var instance = loadProjectile.instantiate()
+		instance.spawnPosition = global_position - instance.position
+		game.add_child.call_deferred(instance)
+	
+	if Level3.isPlayerInLevel3 == true:
+		var instance = loadProjectile.instantiate()
+		instance.spawnPosition = global_position + instance.position * 10
+		level3.add_child.call_deferred(instance)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
