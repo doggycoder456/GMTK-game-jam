@@ -23,9 +23,8 @@ func _process(delta):
 	
 
 func _physics_process(delta):
-	
 	position.x -= horizontalSpeed * delta
-
+	
 func shootProjectile():
 	var instance = loadProjectile.instantiate()
 	instance.spawnPosition = global_position - instance.position
@@ -38,3 +37,11 @@ func _on_cooldown_projectile_timer_timeout():
 	shootProjectile()
 	
 	$CooldownProjectileTimer.wait_time = randf_range(0.5, 1.0)
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("PlayerProjectile"):
+		enemyHealth -= 10
+		body.queue_free()
+		
+		$CollisionShape2D.set_deferred("disabled", true) # Replace with function body.
