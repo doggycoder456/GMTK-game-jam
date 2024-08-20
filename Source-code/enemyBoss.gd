@@ -15,6 +15,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$EnemyBossCanvas/EnemyBossHealthBar.value = enemyBossHealth
+	
+	if enemyBossHealth <= 0.0:
+		get_tree().change_scene_to_file("res://Menu.tscn")
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("PlayerProjectile"):

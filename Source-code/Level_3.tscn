@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://coljjupfe5h44"]
+[gd_scene load_steps=7 format=3 uid="uid://coljjupfe5h44"]
 
 [ext_resource type="PackedScene" uid="uid://c6657rbelalwm" path="res://Player.tscn" id="1_e5wp1"]
 [ext_resource type="Script" path="res://Level3.gd" id="1_jryx2"]
 [ext_resource type="PackedScene" uid="uid://bx1qwtd6ctt5g" path="res://HUD.tscn" id="2_v3o15"]
 [ext_resource type="Script" path="res://BossFightSpawner.gd" id="3_pvwxd"]
 [ext_resource type="PackedScene" uid="uid://bg1uh43lc0ubg" path="res://parallax_background.tscn" id="5_yp4vj"]
+[ext_resource type="AudioStream" uid="uid://cbe7wrcusyyj3" path="res://Music-Assets/Saturn - Final Boss w tail.ogg" id="6_7bwvv"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_jryx2")
@@ -19,3 +20,6 @@ position = Vector2(1000, 300)
 script = ExtResource("3_pvwxd")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_yp4vj")]
+
+[node name="BossFightMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7bwvv")
