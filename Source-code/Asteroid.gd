@@ -2,9 +2,9 @@ class_name Asteroid
 
 extends CharacterBody2D
 
-var asteroidSpriteIndex
+static var asteroidSpriteIndex
 
-@export var horizontalSpeed = 200.0
+@export var fallingSpeed = 500.0
 
 @onready var game = get_tree().get_root().get_node("Game")
 
@@ -26,7 +26,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	position.x -= horizontalSpeed * delta
+	position.y += fallingSpeed * delta
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
