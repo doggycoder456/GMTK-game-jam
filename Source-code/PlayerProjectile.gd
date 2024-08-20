@@ -1,4 +1,4 @@
-class_name Projectile
+class_name PlayerProjectile
 
 extends CharacterBody2D
 
@@ -13,7 +13,7 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	velocity = Vector2(-projectileSpeed, 0.0)
+	velocity = Vector2(projectileSpeed, 0.0)
 	move_and_slide()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

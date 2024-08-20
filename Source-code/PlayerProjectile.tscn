@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://csopwin351c5"]
+
+[ext_resource type="Script" path="res://PlayerProjectile.gd" id="1_p62tl"]
+[ext_resource type="Texture2D" uid="uid://bgtmv0w23njvm" path="res://Art assets/Gun Bullet 1.png" id="2_stap8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2dv2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7m1dp"]
+
+[node name="Node2D" type="CharacterBody2D" groups=["PlayerProjectile"]]
+rotation = 1.5708
+scale = Vector2(3.17, 3.17)
+script = ExtResource("1_p62tl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_stap8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_t2dv2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7m1dp")

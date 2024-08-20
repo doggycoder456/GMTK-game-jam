@@ -45,4 +45,3 @@ func _on_area_2d_body_entered(body):
 		body.queue_free()
 		
 		$CollisionShape2D.set_deferred("disabled", true) # Replace with function body.
-
